@@ -12,20 +12,22 @@ def execute():
     ],
 
     "Home": [
-        st.Page('pages/sobre_mim.py', title='Sobre mim', icon=':material/person:'),
-        st.Page('pages/objetivos_pessoais.py', title='Objetivos pessoais', icon=':material/target:'),
+        st.Page('pages/dataset.py', title='Dataset', icon=':material/monitoring:'),
+        st.Page('pages/perguntas_hipoteses.py', title='Perguntas investigativas', icon=':material/target:'),
     ],
-
-    "Skills": [
-        st.Page('pages/tools.py', title='Techs & Tools', icon=':material/code:'),
-        
-    ],
-
 
     "Analises": [
         st.Page('pages/data_variables.py', title='Dados e variáveis', icon=':material/monitoring:'),
         st.Page('pages/analysis.py', title='Medidas centrais, dispersão e correlação ', icon=':material/monitoring:'),
+    ],
+
+    "Testes de hipótese": [
+        st.Page('pages/testes_hipotese.py', title='Testes de hipótese', icon=':material/code:'),
+        
     ]
+
+
+    
     
 }   
     

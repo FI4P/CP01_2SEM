@@ -5,7 +5,7 @@ import numpy as np
 
 
 # Configurando a página
-st.set_page_config(page_title="Acidentes Ferroviários", page_icon="🚆", layout="wide")
+st.set_page_config(page_title="Desmatamento em regiões da Amazônia", page_icon="🌱", layout="wide")
 
 #Header
 st.header("Introdução", divider="grey");
@@ -25,10 +25,10 @@ st.markdown("""
     </style>
 
     <div class="intro-text">
-        Este trabalho tem como objetivo realizar uma análise detalhada dos acidentes ferroviários ocorridos no Brasil entre dezembro de 2020 e dezembro de 2024. Através da coleta e processamento de dados oficiais relacionados a esses incidentes, provenientes de órgãos responsáveis pelo monitoramento do transporte ferroviário, busca-se identificar padrões e fatores que contribuem para a ocorrência desses acidentes. A análise será conduzida com base em informações provenientes de registros da Agência Nacional de Transportes Terrestres (ANTT), e se concentrará em diferentes aspectos dos acidentes, como causas, localização, severidade e consequências. O intuito é fornecer uma visão abrangente e fundamentada sobre a situação dos acidentes ferroviários no período em questão, além de contribuir para a identificação de possíveis áreas de melhoria e prevenção para o futuro.
+        O desmatamento na região Amazônica é uma das principais preocupações ambientais do Brasil, com impactos diretos sobre o clima, a biodiversidade e os recursos hídricos. Compreender o comportamento do desmatamento ao longo do tempo e em diferentes estados da Amazônia Legal pode fornecer subsídios importantes para políticas públicas, ações de fiscalização e iniciativas sustentáveis. Este trabalho tem como objetivo analisar os dados históricos de desmatamento fornecidos pelo Projeto PRODES, gerando insights visuais por meio de um dashboard interativo com Streamlit.
     </div>
 """, unsafe_allow_html=True)
 
 
-st.subheader("Mapa da Concessão Ferroviária do Brasil")
-st.image("https://www.gov.br/antt/pt-br/assuntos/ferrovias/concessoes-ferroviarias/ferrovia-centro-atlantica-s-a/arquivos/concessoes-ferroviarias.jpg", caption='Concessões ferroviárias')
+st.subheader("Desmatamento em regiões da Amazônia")
+st.image("", caption='Desmatamento') ## Adicionar uma imagem que reflete o desmatamento atual da amazonia
