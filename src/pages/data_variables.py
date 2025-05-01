@@ -90,6 +90,5 @@ if df is not None:
     with col6:
         st.markdown("##### Variáveis Contínuas")
         st.markdown("\n".join([f"- **{var}**" for var in continuous_vars]))
-
 else:
     st.error("Não foi possível carregar os dados.")

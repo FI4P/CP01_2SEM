@@ -4,7 +4,6 @@ import numpy as np
 from streamlit_extras.app_logo import add_logo
 
 def execute():
-    
     pages = {
 
     "Introdução": [
@@ -18,16 +17,10 @@ def execute():
 
     "Analises": [
         st.Page('pages/data_variables.py', title='Dados e variáveis', icon=':material/monitoring:'),
-        st.Page('pages/analysis.py', title='Medidas centrais, dispersão e correlação ', icon=':material/monitoring:'),
-    ],
-
-    "Testes de hipótese": [
+        st.Page('pages/confident-interval.py', title='Intervalo de confiança', icon=':material/monitoring:'),
         st.Page('pages/testes_hipotese.py', title='Testes de hipótese', icon=':material/code:'),
         
-    ]
-
-
-    
+    ],    
     
 }   
     
@@ -37,8 +30,7 @@ def execute():
     pg = st.navigation(pages)
     pg.run()
 
-
 try:
     execute();
 except Exception as err:
-    print('Erro ao executar a aplicação')
+    print('Erro ao executar a aplicação', err)

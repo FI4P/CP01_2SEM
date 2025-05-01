@@ -1,24 +1,18 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from streamlit_extras.app_logo import add_logo
 from scipy import stats
 import plotly.graph_objects as go
 import plotly.express as px
 
-# Configuração da página
-st.set_page_config(
-    page_title="Desmatamento em regiões da Amazônia",
-    page_icon="🌱",
-    layout="wide"
-)
+# Configuração do Streamlit
+st.set_page_config(page_title="Desmatamento em regiões da Amazônia", page_icon="🌱", layout="wide")   
 
-# Caminho do arquivo
-file_path = "src/data/prodes.csv"  # Atualize esse caminho conforme a localização real do arquivo
+file_path = "src/data/prodes.csv"
 
 def load_data():
     try:
-        df = pd.read_csv(file_path, encoding="ISO-8859-1", delimiter=",")
+        df = pd.read_csv(file_path, encoding="ISO-8859-1", delimiter=";")
         return df
     except Exception as e:
         st.error(f"Erro ao carregar os dados: {e}")
@@ -26,28 +20,12 @@ def load_data():
 
 df = load_data()
 
+
+
+
 if df is not None:
-    # Estilo visual
-    st.markdown("""
-        <style>
-           
-            .stMarkdown p, .stText {
-                font-family: 'Segoe UI', sans-serif !important;
-                font-size: 20px !important;
-                line-height: 1.6 !important;
-            }
 
-            .stDataFrame div {
-                font-size: 16px !important;
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
-    # Carregar os dados
-    csv_path = "src/data/prodes.csv"
-    df = pd.read_csv(csv_path)
-
-    # Header
+        # Header
     st.header("Análise Estatística com Intervalo de Confiança", divider="grey")
 
     # Interface de seleção
@@ -177,4 +155,4 @@ if df is not None:
     A margem de erro indica a variabilidade esperada, e valores fora dessa faixa sugerem **participações acima ou abaixo do esperado**, sendo útil para planejar **ações de fiscalização ou políticas ambientais regionais**.
     """)
 else:
-    st.error("Não foi possivel carregar os dados")
+    st.error("Erro ao carregar dados")

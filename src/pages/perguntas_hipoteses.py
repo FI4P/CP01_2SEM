@@ -4,8 +4,22 @@ import numpy as np
 from streamlit_extras.app_logo import add_logo
 
 #Page config
-st.set_page_config(page_title="Desmatamento em regiões da Amazônia", page_icon="🌱", layout="wide")
+st.set_page_config(page_title="Desmatamento em regiões da Amazônia", page_icon="🌱", layout="wide")   
 
+#Estilo Global
+st.markdown("""
+    <style>  
+      /* Elementos de markdown */
+        .stMarkdown p, .stText {
+            font-family: 'Segoe UI', sans-serif !important;
+            font-size: 20px !important;
+            line-height: 1.6 !important;
+            padding-top: 1.5rem; !important;
+            padding-bottom: 0.5rem; !important;
+        }
+
+    </style>
+""", unsafe_allow_html=True)
 
 #Header
 st.header("Perguntas investigativas e hipóteses", divider="grey");
@@ -37,4 +51,3 @@ st.markdown(
            - Como a frequência e gravidade dos acidentes mudaram ao longo do período analisado?  
         """
     )
-    
